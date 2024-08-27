@@ -335,7 +335,7 @@ li {
 .l-sidebar {
   background: #fff;
   margin-top: 40px;
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 36px 0;
   height: 100%;
 }
@@ -762,7 +762,7 @@ li {
 .c-post {
   background: #fff;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .c-post__meta {
@@ -1783,7 +1783,7 @@ div.wpcf7 .wpcf7-spinner {
 .p-recommend__item {
   background: #f9f9f9;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 @media (min-width: 1024px) {
   .p-recommend__item {
@@ -1840,7 +1840,7 @@ div.wpcf7 .wpcf7-spinner {
 .p-message__content {
   padding: 0 20px 20px;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 4px;
 }
 
 .p-message__subtitle {
@@ -1936,6 +1936,7 @@ div.wpcf7 .wpcf7-spinner {
   background: #f2f5f5;
   padding: 16px;
   margin-bottom: 24px;
+  border-radius: 4px;
 }
 
 .p-faq__q {
@@ -2014,7 +2015,7 @@ div.wpcf7 .wpcf7-spinner {
 
 .p-archive__article {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 4px;
   padding: 0 6% 20px;
   margin: 0 auto;
 }
