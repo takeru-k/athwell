@@ -1,0 +1,36 @@
+@use "setting/reset";
+@use "setting/setting";
+
+@use "layout/header";
+@use "layout/inner";
+@use "layout/footer";
+@use "layout/page-header";
+@use "layout/sidebar.scss";
+
+@use "component/hamburger";
+@use "component/button.scss";
+@use "component/cta.scss";
+@use "component/section.scss";
+@use "component/table.scss";
+@use "component/news.scss";
+@use "component/heading.scss";
+@use "component/banner.scss";
+@use "component/post.scss";
+@use "component/search.scss";
+@use "component/aside.scss";
+@use "component/form.scss";
+
+@use "project/error.scss";
+@use "project/main-visual";
+@use "project/slideshow";
+@use "project/top-news.scss";
+@use "project/top-service.scss";
+@use "project/top-about.scss";
+@use "project/intro.scss";
+@use "project/recommend.scss";
+@use "project/message.scss";
+@use "project/trial.scss";
+@use "project/faq.scss";
+@use "project/article.scss";
+@use "project/archive.scss";
+@use "project/contact.scss";

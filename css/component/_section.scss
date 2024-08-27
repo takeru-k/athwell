@@ -1,0 +1,90 @@
+@use "../setting/setting";
+.c-section {
+  padding: 40px 0;
+}
+
+.c-section + .c-section {
+  padding-top: 0;
+}
+
+.c-section__heading {
+  h2 {
+    position: relative;
+    text-align: center;
+    padding-top: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .c-section {
+    padding: 64px 0;
+  }
+}
+
+.c-section.-background {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url(../images/common/background-blur01.png) no-repeat center
+      center/cover;
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    top: -160px;
+    z-index: -2;
+
+    @media (min-width: 1024px) {
+      width: 400px;
+      height: 800px;
+      top: -100%;
+    }
+  }
+
+  &::after {
+    content: "";
+    background: url(../images/common/background-blur01.png) no-repeat center
+      center/cover;
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+    z-index: -2;
+    transform: rotate(180deg);
+  }
+}
+
+.c-section.-background-lg {
+  position: relative;
+
+  &::before {
+    content: "";
+    background: url(../images/common/background-blur01.png) no-repeat center
+      center/cover;
+    width: 200px;
+    height: 400px;
+    position: absolute;
+    top: -160px;
+    z-index: -2;
+
+    @media (min-width: 1024px) {
+      width: 400px;
+      height: 800px;
+      bottom: -90%;
+    }
+  }
+
+  &::after {
+    content: "";
+    background: url(../images/common/background-blur01.png) no-repeat center
+      center/cover;
+    width: 400px;
+    height: 600px;
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+    z-index: -2;
+    transform: rotate(180deg);
+  }
+}

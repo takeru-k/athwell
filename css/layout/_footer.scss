@@ -1,0 +1,79 @@
+@use "../setting/setting";
+
+.l-footer {
+  background: setting.$color-sub;
+  padding: 40px 6% 12px;
+}
+
+.l-footer__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.l-footer__contents {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.l-footer__logo {
+  width: 160px;
+}
+
+.l-footer__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.l-footer__menu li {
+  font-size: 14px;
+  color: #767676;
+}
+
+.l-footer__copy {
+  font-size: 12px;
+  color: #919191;
+  margin-top: 40px;
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .l-footer {
+    padding: 64px 40px 20px;
+  }
+
+  .l-footer__logo {
+    width: 200px;
+  }
+
+  .l-footer__contents {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .l-footer__info {
+    width: 300px;
+  }
+
+  .l-footer__menu {
+    margin-top: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .l-footer__copy {
+    margin-top: 64px;
+    text-align: right;
+  }
+}
+
+.l-footer-contact {
+  background: #fff;
+  padding: 0 0 12px;
+
+  .l-footer__copy {
+    text-align: center;
+  }
+}

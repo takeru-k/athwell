@@ -1,0 +1,100 @@
+@use "../setting/setting";
+
+.c-button {
+  position: relative;
+  margin: 36px auto 0;
+  width: fit-content;
+}
+
+@media (min-width: 1024px) {
+  .c-button.-left_pc {
+    margin-left: 0;
+  }
+}
+
+.c-button-link {
+  padding: 10px 40px 10px 32px;
+  display: inline grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 1em;
+  align-items: center;
+  inline-size: min(100%, 400px);
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  border-radius: 4px;
+
+  &::before {
+    content: ""; /* 空の疑似要素を用意する */
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+}
+
+.c-button-gradation {
+  background: setting.$color-gradation;
+  color: #fff;
+  border: 1px solid #fff;
+
+  &::after {
+    background: url(../images/common/arrow-white.svg) no-repeat center
+      center/contain;
+  }
+}
+
+.c-button-gradation:hover {
+  background: #fff;
+  color: setting.$color-main;
+  border: 1px solid setting.$color-main;
+
+  &::after {
+    background: url(../images/common/arrow-blue.svg) no-repeat center
+      center/contain;
+  }
+}
+
+.c-button-white {
+  background: #fff;
+  color: setting.$color-main;
+  border: 1px solid setting.$color-main;
+
+  &::after {
+    background: url(../images/common/arrow-blue.svg) no-repeat center
+      center/contain;
+  }
+}
+
+.c-button-white:hover {
+  background: setting.$color-main;
+  color: #fff;
+  border: 1px solid setting.$color-main;
+
+  &::after {
+    background: url(../images/common/arrow-white.svg) no-repeat center
+      center/contain;
+  }
+}
+
+.c-button-cta {
+  background: #fff;
+  color: setting.$color-accent;
+  border: 1px solid setting.$color-accent;
+
+  &::after {
+    background: url(../images/common/arrow-accent.svg) no-repeat center
+      center/contain;
+  }
+}
+
+.c-button-cta:hover {
+  color: setting.$color-main;
+  text-decoration: underline;
+}

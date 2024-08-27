@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>アスウェル</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="l-header js-header">
+      <div class="l-header__inner">
+        <h1 class="l-header__logo">
+          <a href="index.html">
+            <img
+              src="images/header/logo.png"
+              alt=""
+              aria-label="トップに戻る"
+            />
+          </a>
+        </h1>
+        <!-- /.l-header__logo -->
+
+        <nav class="l-header__nav">
+          <ul class="l-header__menu">
+            <li><a href="index.html">ホーム</a></li>
+            <li><a href="service-dance.html">ダンス教室</a></li>
+            <li><a href="service-futsal.html">フットサル教室</a></li>
+            <li><a href="service-ball.html">ボール教室</a></li>
+            <li><a href="service-walking.html">ウォーキング教室</a></li>
+            <li><a href="company.html">運営会社</a></li>
+            <li><a href="archive.html">お知らせ</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+          <!-- /.l-header__menu -->
+        </nav>
+
+        <button
+          type="button"
+          class="c-hamburger js-btn"
+          aria-label="Navigation"
+        >
+          <span class="c-hamburger__line"></span
+          ><!-- /.c-hamburger__line --></button
+        ><!-- /.c-hamburger -->
+      </div>
+      <!-- /.l-header__inner -->
+    </header>
+    <!-- /.l-header -->
+
+    <div class="l-page-header">
+      <div class="l-inner">
+        <div class="l-page-header__wrap">
+          <p class="l-page-header__subtitle">無料体験のご予約はこちら</p>
+          <!-- /.l-page-header__subtitle -->
+          <h1 class="l-page-header__title">お問い合わせ</h1>
+          <!-- /.l-page-header__title -->
+        </div>
+        <!-- /.l-page-header__wrap -->
+      </div>
+      <!-- /.l-inner -->
+    </div>
+    <!-- /.l-page-header -->
+
+    <section class="c-section">
+      <div class="l-inner">
+        <div class="p-contact">
+          <div class="p-contact__body">
+            <div class="p-contact__lead">
+              <p>
+                無料体験のご予約や、教室に関するご質問・ご相談はお気軽にご連絡ください。
+              </p>
+              <p>お急ぎの方はお電話ください。</p>
+            </div>
+            <!-- /.p-contact__lead -->
+
+            <div class="p-contact__tel">
+              <a href="tel:0198-33-0712"><small>tel</small>0198-33-0712</a>
+              <span>受付時間: 9:00〜17:30</span>
+            </div>
+            <!-- /.p-contact__tel -->
+
+            <div class="p-contact__lead">
+              <p>
+                メールでのお問い合わせは、下記フォームへ必要事項をご記入いただき送信してください。
+              </p>
+            </div>
+            <!-- /.p-contact__lead -->
+
+            <div class="p-contact__form">
+              <div class="c-form">
+                <table class="contactTable">
+                  <tbody>
+                    <tr>
+                      <th>
+                        <div class="inputLabel" id="attribute">
+                          教室について
+                        </div>
+                      </th>
+                      <td>
+                        <div class="inputField">
+                          <label class="selectbox-3">
+                            <select>
+                              <option>ダンス教室</option>
+                              <option>フットサル教室</option>
+                              <option>ボール教室</option>
+                              <option>ウォーキング教室</option>
+                              <option>その他</option>
+                            </select>
+                          </label>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <label for="company" class="inputLabel">お名前</label>
+                      </th>
+                      <td>
+                        <div class="inputField">
+                          <input type="text" id="name" name="name" />
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>
+                        <label for="email" class="inputLabel"
+                          >メールアドレス<span class="require">必須</span>
+                        </label>
+                      </th>
+                      <td>
+                        <div class="inputField">
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                          />
+                          <p class="errorText">
+                            正しい形式のメールアドレスを入力してください。
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <th>
+                        <label for="email" class="inputLabel"
+                          >電話番号
+                          <span class="require">必須</span>
+                        </label>
+                      </th>
+                      <td>
+                        <div class="inputField">
+                          <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            required
+                          />
+                          <p class="errorText">
+                            正しい形式のメールアドレスを入力してください。
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <th>
+                        <label for="contact_msg" class="inputLabel"
+                          >お問合せ内容
+                        </label>
+                      </th>
+                      <td>
+                        <div class="inputField">
+                          <textarea
+                            name="contact_msg"
+                            id="contact_msg"
+                            cols="30"
+                            rows="10"
+                            required
+                          ></textarea>
+                          <p class="errorText">
+                            お問合せ内容を入力してください。
+                          </p>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <div class="privacyBox">
+                  <p>
+                    <a
+                      href="http://www.sendai-lang.com/pdf/personal.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >プライバシーポリシー</a
+                    >に同意して、送信してください。
+                  </p>
+                </div>
+
+                <div class="formBtns">
+                  <button class="buttonAction">この内容で送信する</button>
+                </div>
+              </div>
+              <!-- /.c-form -->
+            </div>
+            <!-- /.p-contact__form -->
+          </div>
+          <!-- /.p-contact__body -->
+        </div>
+        <!-- /.p-contact -->
+      </div>
+      <!-- /.l-inner -->
+    </section>
+    <!-- /.c-section -->
+
+    <footer class="l-footer">
+      <div class="l-footer__inner">
+        <div class="l-footer__contents">
+          <div class="l-footer__info">
+            <h1 class="l-footer__logo">
+              <a href="index.html">
+                <img
+                  src="images/header/logo.png"
+                  alt=""
+                  aria-label="トップに戻る"
+                />
+              </a>
+            </h1>
+            <!-- /.l-footer__logo -->
+          </div>
+          <!-- /.l-footer__info -->
+
+          <nav class="l-footer__nav">
+            <ul class="l-footer__menu">
+              <li><a href="index.html">ホーム</a></li>
+              <li><a href="service-dance.html">ダンス教室</a></li>
+              <li><a href="service-futsal.html">フットサル教室</a></li>
+              <li><a href="service-ball.html">ボール教室</a></li>
+              <li><a href="service-walking.html">ウォーキング教室</a></li>
+              <li><a href="company.html">運営会社</a></li>
+              <li><a href="archive.html">お知らせ</a></li>
+              <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+            <!-- /.l-footer__menu -->
+          </nav>
+          <!-- /.l-footer__nav -->
+        </div>
+        <!-- /.l-footer__contents -->
+
+        <small class="l-footer__copy"
+          >&copy; Athwell /
+          <a href="https://web-iwate.com">Knowledge Service, Inc.</a></small
+        >
+      </div>
+      <!-- /.l-footer__inner -->
+    </footer>
+    <!-- /.l-footer -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

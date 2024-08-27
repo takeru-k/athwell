@@ -1,0 +1,77 @@
+@use "../setting/setting";
+
+.p-top-news {
+  padding: 40px 0;
+  position: relative;
+}
+
+.p-top-news::before {
+  content: "";
+  background: url(../images/common/background-blur01.png) no-repeat center
+    center/cover;
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  top: -160px;
+  z-index: -1;
+
+  @media (min-width: 1024px) {
+    width: 400px;
+    height: 800px;
+    top: -100%;
+  }
+}
+
+.p-top-news::after {
+  content: "";
+  background: url(../images/common/background-blur01.png) no-repeat center
+    center/cover;
+  width: 200px;
+  height: 400px;
+  position: absolute;
+  bottom: -30%;
+  right: 0;
+  z-index: -1;
+  transform: rotate(180deg);
+}
+
+.p-top-news__heading {
+  line-height: 1.5;
+}
+
+.p-top-news__heading-subtitle {
+  font-size: clamp(2rem, 1.636rem + 1.82vw, 3rem);
+  color: setting.$color-main;
+  text-transform: capitalize;
+  font-family: setting.$font-english;
+  letter-spacing: 1px;
+}
+
+.p-top-news__heading-title {
+  font-size: 18px;
+}
+
+@media (min-width: 1024px) {
+  .p-top-news__wrap {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "title items"
+      "button items";
+    gap: 0 80px;
+  }
+
+  .p-top-news__heading {
+    grid-area: title;
+  }
+
+  .p-top-news__button {
+    grid-area: button;
+    align-self: end;
+  }
+
+  .p-top-news__list {
+    grid-area: items;
+  }
+}

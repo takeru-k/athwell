@@ -1,0 +1,41 @@
+@keyframes infinity-scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.p-slideshow__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.p-slideshow__list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.p-slideshow__list:first-child {
+  padding-right: 4px;
+}
+.p-slideshow__list--left {
+  animation: infinity-scroll-left 30s infinite linear 0.1s both;
+}
+.p-slideshow__item {
+  width: calc(100vw / 2);
+  height: calc((100vw / 2) * (2 / 3)); /* アスペクト比 3:2 */
+}
+.p-slideshow__item > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+@media (min-width: 1024px) {
+  .p-slideshow {
+    display: none;
+  }
+}

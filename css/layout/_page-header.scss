@@ -1,0 +1,18 @@
+@use "../setting/setting";
+
+.l-page-header {
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.l-page-header__subtitle {
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+  background: linear-gradient(to right, #2e3092, #2391d1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.l-page-header__title {
+  font-size: clamp(1.75rem, 1.568rem + 0.91vw, 2.25rem);
+}

@@ -1,0 +1,53 @@
+@use "../setting/setting";
+
+.p-trial__texts {
+  p {
+    margin-top: 16px;
+  }
+
+  li {
+    position: relative;
+    padding-left: 1em;
+    text-indent: -1em;
+    margin-bottom: 4px;
+
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 4px;
+      background: #164194;
+      border-radius: 50%;
+      vertical-align: middle;
+      margin-right: 0.8em;
+      margin-top: -4px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-trial {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2列のグリッドを設定、右側の列を広くする */
+    grid-template-rows: repeat(8, auto); /* 縦方向に8分割 */
+    gap: 20px; /* グリッド要素間の間隔 */
+  }
+
+  .p-trial__heading {
+    grid-column: 1 / 2; /* 左側の列に配置 */
+    grid-row: 1 / 3; /* 上から2行目までの範囲に配置 */
+    padding-right: 20px; /* 左右の間隔を調整 */
+  }
+
+  .p-trial__button {
+    grid-column: 1 / 2; /* 左側の列に配置 */
+    grid-row: 3 / 4; /* 3行目に配置 */
+    text-align: center; /* ボタンを中央寄せ */
+  }
+
+  .p-trial__texts {
+    grid-column: 2 / 3; /* 右側の列に配置 */
+    grid-row: 1 / 9; /* 1行目から8行目までに配置 */
+    padding-left: 20px; /* 左右の間隔を調整 */
+  }
+}

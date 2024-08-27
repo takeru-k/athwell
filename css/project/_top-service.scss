@@ -1,0 +1,210 @@
+@use "../setting/setting";
+
+.p-top-service {
+  padding: 40px 0 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.p-top-service__item {
+  position: relative;
+}
+
+.p-top-service__texts {
+  background: #fff;
+  margin-top: 180px;
+  padding: 20px 20px 20px 0;
+  border-radius: 4px;
+}
+
+.p-top-service__label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.p-top-service__heading-subtitle {
+  color: setting.$color-accent;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: clamp(0.875rem, 0.784rem + 0.45vw, 1.125rem);
+}
+
+.p-top-service__heading-title {
+  font-size: clamp(1.125rem, 0.989rem + 0.68vw, 1.5rem);
+}
+
+.p-top-service__heading-number {
+  font-family: setting.$font-english;
+  font-size: clamp(2rem, 1.818rem + 0.91vw, 2.5rem);
+  color: setting.$color-accent;
+  position: relative;
+}
+
+.p-top-service__heading-number:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: setting.$color-accent;
+  left: 0;
+  bottom: 10%;
+}
+
+.p-top-service__desc {
+  margin-top: 12px;
+}
+
+.p-top-service__desc p {
+  margin-top: 16px;
+}
+
+.p-top-service__image {
+  position: absolute;
+  width: 100vw;
+  right: -20%;
+  height: 220px;
+  top: -160px;
+  z-index: -1;
+}
+
+.p-top-service__image img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.p-top-service__items .p-top-service__item:nth-child(2) {
+  .p-top-service__texts {
+    padding: 20px 0 20px 20px;
+
+    @media (min-width: 768px) {
+      padding: 20px;
+    }
+  }
+
+  .p-top-service__image {
+    left: -20%;
+
+    @media (min-width: 768px) {
+      left: 0;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .p-top-service {
+    padding: 64px 0 0;
+    position: relative;
+    overflow: hidden; /* 親要素でオーバーフローを隠す */
+
+    /* 各背景画像の共通スタイル */
+    &::before,
+    &::after {
+      content: "";
+      background: url(../images/common/background-blur01.png) no-repeat center
+        center/cover;
+      position: absolute;
+      width: 600px;
+      height: 800px;
+      z-index: -1;
+    }
+
+    /* 1つ目の位置と回転 */
+    &::before {
+      top: 0;
+      left: 0;
+      transform: rotate(0deg);
+    }
+
+    /* 2つ目の位置と回転 */
+    &::after {
+      bottom: 0;
+      right: 0;
+      transform: rotate(180deg);
+    }
+
+    /* 3つ目の位置調整 */
+    &::before:first-child {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* 4つ目の位置調整 */
+    &::after:nth-child(4) {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+    }
+  }
+
+  .p-top-service .-background {
+    position: relative;
+    overflow: hidden; /* 親要素でオーバーフローを隠す */
+
+    /* 各背景画像の共通スタイル */
+    &::before,
+    &::after {
+      content: "";
+      background: url(../images/common/background-blur01.png) no-repeat center
+        center/cover;
+      position: absolute;
+      width: 600px;
+      height: 800px;
+      z-index: -1;
+    }
+
+    /* 2つ目の位置調整 */
+    &::before {
+      top: 20%;
+      right: 0;
+      transform: rotate(180deg);
+    }
+
+    /* 3つ目の位置調整 */
+    &::after {
+      top: 40%;
+      left: 0;
+    }
+  }
+
+  .p-top-service__item {
+    margin: 64px auto 120px;
+    display: flex;
+    gap: 80px;
+    overflow: visible;
+    position: relative;
+  }
+
+  .p-top-service__item.-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .p-top-service__texts {
+    width: 50%;
+    max-width: 460px;
+    margin-top: 0;
+    padding-left: 20px;
+    background: transparent;
+  }
+
+  .p-top-service__image {
+    position: relative;
+    top: 0;
+    height: auto;
+    right: 0;
+    left: 0;
+    width: 50%;
+    z-index: 1;
+  }
+  .p-top-service__image img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+
+  .-background__left {
+    position: relative;
+  }
+}

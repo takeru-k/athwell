@@ -1,0 +1,79 @@
+@use "../setting/setting";
+
+.p-message {
+  position: relative;
+  padding-bottom: 40px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(to bottom, #fff 50%, setting.$color-sub 50%);
+
+    @media (min-width: 1024px) {
+      background: linear-gradient(to bottom, #fff 40%, setting.$color-sub 40%);
+    }
+  }
+}
+
+.p-message__wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.p-message__image img {
+  aspect-ratio: 3 / 2;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.p-message__content {
+  padding: 0 20px 20px;
+  background: #fff;
+  border-radius: 10px;
+}
+.p-message__subtitle {
+  color: setting.$color-accent;
+  font-size: clamp(0.875rem, 0.83rem + 0.23vw, 1rem);
+}
+
+.p-message__title {
+  font-size: clamp(1.125rem, 1.08rem + 0.23vw, 1.25rem);
+}
+
+.p-message__texts p {
+  margin-top: 16px;
+}
+
+@media (min-width: 768px) {
+  .p-message__wrap {
+    flex-direction: row-reverse;
+    gap: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .p-message {
+    padding-bottom: 64px;
+  }
+
+  .p-message__content {
+    width: 50%;
+    padding: 28px;
+  }
+
+  .p-message__image {
+    width: 50%;
+  }
+
+  .p-message__image img {
+    width: 100%;
+    height: 100%;
+  }
+}

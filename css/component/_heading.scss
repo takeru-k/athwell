@@ -1,0 +1,19 @@
+@use "../setting/setting";
+
+.c-heading {
+  text-align: center;
+}
+
+.c-heading__subtitle {
+  text-transform: capitalize;
+  font-family: setting.$font-english;
+  background: linear-gradient(to right, #2e3092, #2391d1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(2rem, 1.636rem + 1.82vw, 3rem);
+}
+
+.c-heading__title {
+  font-size: 18px;
+}
