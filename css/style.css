@@ -1788,6 +1788,7 @@ div.wpcf7 .wpcf7-spinner {
 @media (min-width: 1024px) {
   .p-recommend__item {
     padding: 28px;
+    width: 33%;
   }
 }
 
@@ -1946,6 +1947,10 @@ div.wpcf7 .wpcf7-spinner {
 .p-faq__a {
   margin-top: 12px;
   font-size: 14px;
+}
+
+.p-faq a {
+  text-decoration: underline;
 }
 
 @media (min-width: 1024px) {
